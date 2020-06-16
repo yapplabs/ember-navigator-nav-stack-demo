@@ -5074,10 +5074,10 @@ ember-modifier-manager-polyfill@^1.1.0:
     ember-cli-version-checker "^2.1.2"
     ember-compatibility-helpers "^1.2.0"
 
-ember-nav-stack@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/ember-nav-stack/-/ember-nav-stack-4.1.0.tgz#d9a8c73eff08deadfe982bcd294daf147ab1d2a7"
-  integrity sha512-g/YnCjdNfZdoFV2z3ujV9WvTWIIhSkWzoiSNTRzvcIPe37UtgiSm0f75I2IsOQ7S6789w5tQsyZRZ8JcveNZcg==
+ember-nav-stack@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/ember-nav-stack/-/ember-nav-stack-4.3.0.tgz#bc34372a2ca7af1f075625bc146089763a7b4f21"
+  integrity sha512-fF/pOvO/rmgomVzyTfx+eoETwlx1tlW/Is5sCNMJ0hQEjnW9RR9ElKAfExkp3GfGBAbMksJQhdp+pAZJqFIWTg==
   dependencies:
     "@ember/render-modifiers" "^1.0.2"
     ember-auto-import "^1.5.3"
@@ -5090,10 +5090,9 @@ ember-nav-stack@^4.1.0:
     macro-decorators "^0.1.2"
     wobble "^1.5.1"
 
-ember-navigator@^0.0.10:
+"ember-navigator@git+ssh://git@github.com/yapplabs/ember-navigator#master":
   version "0.0.10"
-  resolved "https://registry.yarnpkg.com/ember-navigator/-/ember-navigator-0.0.10.tgz#a8ee47c475968fc79c52a5fd21cdb9e858372ef5"
-  integrity sha512-+7gZ8KkVrbOfqxe+GU7bvAY56W++CV0jSUAun7OZBbj02Lg1YofUXxX2kn92ZYkwqgugPFti3pwK9RtaPMgsUw==
+  resolved "git+ssh://git@github.com/yapplabs/ember-navigator#96e6f28e1cfb8d201d50a7af68d8ab3d0abf056c"
   dependencies:
     ember-cli-babel "^7.10.0"
     ember-cli-htmlbars "^2.0.1"
