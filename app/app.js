@@ -1,13 +1,13 @@
 import Application from '@ember/application';
-import Resolver from './resolver';
+import Resolver from 'ember-resolver';
 import loadInitializers from 'ember-load-initializers';
 import config from './config/environment';
 import classFactory from 'ember-resolver/utils/class-factory';
 
-const App = Application.extend({
-  modulePrefix: config.modulePrefix,
-  podModulePrefix: config.podModulePrefix,
-  Resolver: Resolver.extend({
+export default class App extends Application {
+  modulePrefix = config.modulePrefix;
+  podModulePrefix = config.podModulePrefix;
+  Resolver = Resolver.extend({
     resolveNavigatorRoute(parsedName) {
       let normalizedModuleName = this.namespace.modulePrefix + '/components/screens/' + parsedName.fullNameWithoutType + '/route';
       if (this._moduleRegistry.has(normalizedModuleName)) {
@@ -26,9 +26,7 @@ const App = Application.extend({
         return this.resolveOther(parsedName);
       }
     }
-  })
-});
+  });
+}
 
 loadInitializers(App, config.modulePrefix);
-
-export default App;

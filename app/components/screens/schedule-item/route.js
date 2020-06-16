@@ -1,4 +1,4 @@
-import YappDefaultRoute from 'dummy/navigator-routes/yapp-default';
+import YappDefaultRoute from 'ember-navigator-nav-stack-demo/navigator-routes/yapp-default';
 import { inject as service } from '@ember/service';
 import { action } from '@ember/object';
 

@@ -1,11 +1,11 @@
 import Service from '@ember/service';
 import { route } from 'ember-navigator';
-import { mount, pageStackRouter, yappTabRouter } from 'ember-nav-stack/utils/navigator';
+import { mount, pageStackRouter, yappTabRouter } from 'ember-navigator-nav-stack-demo/utils/navigator';
 import { getOwner, setOwner } from '@ember/application';
 import { addListener } from '@ember/object/events';
 import { inject as service } from '@ember/service';
 import { action } from '@ember/object';
-import StackpathGrammar from 'dummy/grammar/stackpath';
+import StackpathGrammar from 'ember-navigator-nav-stack-demo/grammar/stackpath';
 import nearley from 'nearley';
 import { underscore } from '@ember/string';
 
