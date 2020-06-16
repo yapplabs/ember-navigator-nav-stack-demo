@@ -1,6 +1,8 @@
 'use strict';
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const MergeTrees = require('broccoli-merge-trees');
+const Funnel = require('broccoli-funnel');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
@@ -20,5 +22,11 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
-  return app.toTree();
+  var appTree = app.toTree();
+  return new MergeTrees([appTree, new Funnel(appTree, {
+    files: ['index.html'],
+    getDestinationPath: function() {
+      return '404.html';
+    }
+  })]);
 };
