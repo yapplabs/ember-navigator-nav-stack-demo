@@ -11,7 +11,7 @@ export function yappTabRouter(name, children, options) {
 }
 
 export function mount(routerMap, resolver) {
-  return new ContainerAwareMountedRouter(routerMap, resolver)
+  return new MountedRouter(routerMap, resolver)
 }
 class PageStackRouter extends StackRouter {
   getInitialState(options = {}) {
@@ -33,18 +33,4 @@ class YappTabRouter extends TabRouter {
   }
 }
 
-/* This subclass of MountedRouter expects to be provided a resolver that
- * will return route factories from the container's factoryFor. It will then
- * call create on the factory to instantiate the route, passing in the
- * MountedNode instance
- *
- * TODO: could this be the default behavior for MountedRouter? i.e. if resolve
- * returns something with a create method, use that instead of `new`ing up a class
- */
-class ContainerAwareMountedRouter extends MountedRouter {
-  createRoute(node) {
-    let RouteFactory = this.resolve(node.componentName);
-    return RouteFactory.create({ node: node });
-  }
-}
 

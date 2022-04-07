@@ -1,4 +1,4 @@
-import { PublicRoute } from 'ember-navigator/-private/public-route';
+import NavigatorRoute from 'ember-navigator/-private/navigator-route';
 import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 import { underscore } from '@ember/string';
@@ -25,7 +25,7 @@ function parentNode(node) {
   }
 }
 
-export default class extends PublicRoute {
+export default class extends NavigatorRoute {
   @tracked node;
 
   static create(props) {
